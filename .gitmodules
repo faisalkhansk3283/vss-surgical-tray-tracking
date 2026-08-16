@@ -1,0 +1,3 @@
+[submodule "video-search-and-summarization"]
+	path = video-search-and-summarization
+	url = https://github.com/faisalkhansk3283/video-search-and-summarization-hackathon.git
