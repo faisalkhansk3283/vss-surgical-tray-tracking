@@ -1,0 +1,113 @@
+{
+  "video": "Hlth.mp4",
+  "duration_s": 46.866267,
+  "n_windows": 5,
+  "baseline": {
+    "green pencil": {
+      "count": 1,
+      "present": true
+    },
+    "orange pencil": {
+      "count": 1,
+      "present": true
+    },
+    "metallic needle": {
+      "count": 1,
+      "present": true
+    },
+    "white gauze pad": {
+      "count": 1,
+      "present": true
+    },
+    "white label with text": {
+      "count": 1,
+      "present": true
+    }
+  },
+  "final_ledger": {
+    "green pencil": {
+      "count": 1,
+      "present": true
+    },
+    "orange pencil": {
+      "count": 1,
+      "present": true
+    },
+    "metallic needle": {
+      "count": 0,
+      "present": false
+    },
+    "white gauze pad": {
+      "count": 1,
+      "present": true
+    },
+    "white label with text": {
+      "count": 0,
+      "present": false
+    },
+    "white rectangular packet": {
+      "count": 1,
+      "present": true
+    },
+    "white folded cloth": {
+      "count": 0,
+      "present": false
+    },
+    "white cloth": {
+      "count": 1,
+      "present": true
+    },
+    "metal rod": {
+      "count": 1,
+      "present": true
+    },
+    "small white packet": {
+      "count": 1,
+      "present": true
+    },
+    "red pencil": {
+      "count": 1,
+      "present": true
+    },
+    "white packet": {
+      "count": 1,
+      "present": true
+    },
+    "metallic rod": {
+      "count": 1,
+      "present": true
+    }
+  },
+  "final_mismatches": [
+    {
+      "name": "metallic needle",
+      "start": {
+        "count": 1,
+        "present": true
+      },
+      "end": {
+        "count": 0,
+        "present": false
+      }
+    },
+    {
+      "name": "white label with text",
+      "start": {
+        "count": 1,
+        "present": true
+      },
+      "end": {
+        "count": 0,
+        "present": false
+      }
+    }
+  ],
+  "final_state": "CRITICAL",
+  "cumulative_usage": {
+    "prompt_tokens": 49935,
+    "completion_tokens": 969,
+    "total_tokens": 50904
+  },
+  "cumulative_latency_s": 135.3,
+  "run_dir": "/home/acer01/chrono-surge-dashboard/analysis_runs/20260816_083449_Hlth.mp4"
+}

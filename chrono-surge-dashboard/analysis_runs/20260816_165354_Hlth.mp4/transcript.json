@@ -1,0 +1,419 @@
+[
+  {
+    "step": 0,
+    "start_s": 0,
+    "end_s": 5,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 0s to 5s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"orange pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"metallic needle\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white gauze pad\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 2, \"count_end\": 2}, {\"name\": \"white label with text\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}], \"notes\": \"The green pencil is briefly removed and then returned to its original position on the tray. All other objects remain stationary throughout the clip.\"}",
+    "parsed_objects": [
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 2,
+        "count_end": 2
+      },
+      {
+        "name": "metallic needle",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 1,
+        "count_end": 1
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5428,
+      "total_tokens": 5644,
+      "completion_tokens": 216,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 25.4,
+    "window_state": "NOMINAL",
+    "still_missing": [],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:54:20.564700"
+  },
+  {
+    "step": 1,
+    "start_s": 5,
+    "end_s": 10,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 5s to 10s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"red pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white paper\", \"present_at_start\": true, \"present_at_end\": false, \"count_start\": 1, \"count_end\": 0}, {\"name\": \"white cloth\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 2, \"count_end\": 2}], \"notes\": \"The white paper is picked up and removed from the tray area by the hand.\"}",
+    "parsed_objects": [
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 2,
+        "count_end": 2
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5429,
+      "total_tokens": 5594,
+      "completion_tokens": 165,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 20.3,
+    "window_state": "CRITICAL",
+    "still_missing": [
+      "metallic needle"
+    ],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:54:41.396426"
+  },
+  {
+    "step": 2,
+    "start_s": 10,
+    "end_s": 15,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 10s to 15s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"white rectangular packet\", \"present_at_start\": false, \"present_at_end\": true, \"count_start\": 0, \"count_end\": 1}], \"notes\": \"A hand enters from the bottom right, picks up a white rectangular packet from the tray area, and places it next to the green pencil.\"}",
+    "parsed_objects": [],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5430,
+      "total_tokens": 5503,
+      "completion_tokens": 73,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 11.0,
+    "window_state": "CRITICAL",
+    "still_missing": [
+      "metallic needle"
+    ],
+    "decaying": [
+      "pencil"
+    ],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:54:52.834513"
+  },
+  {
+    "step": 3,
+    "start_s": 15,
+    "end_s": 20,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 15s to 20s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"white gauze pad\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 2, \"count_end\": 2}, {\"name\": \"thin metal rod\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"red pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white packet with text\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}], \"notes\": \"A hand briefly enters the frame to adjust the position of the white gauze pad near the bottom center of the tray area.\"}",
+    "parsed_objects": [
+      {
+        "name": "thin metal rod",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 1,
+        "count_end": 1
+      },
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 2,
+        "count_end": 2
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5430,
+      "total_tokens": 5646,
+      "completion_tokens": 216,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 25.7,
+    "window_state": "CRITICAL",
+    "still_missing": [
+      "metallic needle"
+    ],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:55:18.948651"
+  },
+  {
+    "step": 4,
+    "start_s": 20,
+    "end_s": 25,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 20s to 25s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"white cloth\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 2, \"count_end\": 2}, {\"name\": \"metallic needle\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"orange pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"small white packet\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}], \"notes\": \"The hand places a white cloth on the dark surface near the green pencil and small white packet. The hand then picks up the orange pencil.\"}",
+    "parsed_objects": [
+      {
+        "name": "metallic needle",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 1,
+        "count_end": 1
+      },
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 2,
+        "count_end": 2
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5430,
+      "total_tokens": 5644,
+      "completion_tokens": 214,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 25.6,
+    "window_state": "CRITICAL",
+    "still_missing": [
+      "thin metal rod"
+    ],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:55:44.973844"
+  },
+  {
+    "step": 5,
+    "start_s": 25,
+    "end_s": 30,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 25s to 30s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"white gauze pad\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 2, \"count_end\": 2}, {\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"orange pencil\", \"present_at_start\": false, \"present_at_end\": true, \"count_start\": 0, \"count_end\": 1}, {\"name\": \"metallic rod\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}], \"notes\": \"A hand enters the frame and places an orange pencil next to the green pencil.\"}",
+    "parsed_objects": [
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 1,
+        "count_end": 2
+      },
+      {
+        "name": "metallic needle",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 1,
+        "count_end": 1
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5430,
+      "total_tokens": 5599,
+      "completion_tokens": 169,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 21.1,
+    "window_state": "CRITICAL",
+    "still_missing": [
+      "thin metal rod"
+    ],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:56:06.488478"
+  },
+  {
+    "step": 6,
+    "start_s": 30,
+    "end_s": 35,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 30s to 35s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"white cloth\", \"present_at_start\": true, \"present_at_end\": false, \"count_start\": 1, \"count_end\": 0}, {\"name\": \"metallic rod\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"red pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white packet\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}], \"notes\": \"A hand wearing a red wristband is seen removing the white cloth from the left side of the frame at the start of the clip. The metallic rod, red pencil, green pencil, and white packet remain stationary throughout the clip.\"}",
+    "parsed_objects": [
+      {
+        "name": "metallic needle",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 1,
+        "count_end": 1
+      },
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 2,
+        "count_end": 2
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5430,
+      "total_tokens": 5661,
+      "completion_tokens": 231,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 27.2,
+    "window_state": "CRITICAL",
+    "still_missing": [
+      "thin metal rod"
+    ],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:56:34.094502"
+  },
+  {
+    "step": 7,
+    "start_s": 35,
+    "end_s": 40,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 35s to 40s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"thin metal rod\", \"present_at_start\": true, \"present_at_end\": false, \"count_start\": 1, \"count_end\": 0}, {\"name\": \"red pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white cloth\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"small white packet\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}], \"notes\": \"A hand wearing a red wristband enters from the bottom left and picks up the thin metal rod, removing it from the tray area. All other objects remain in place throughout the clip.\"}",
+    "parsed_objects": [
+      {
+        "name": "thin metal rod",
+        "present_at_start": true,
+        "present_at_end": false,
+        "count_start": 1,
+        "count_end": 0
+      },
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 2,
+        "count_end": 2
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5430,
+      "total_tokens": 5653,
+      "completion_tokens": 223,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 26.4,
+    "window_state": "CRITICAL",
+    "still_missing": [
+      "metallic needle",
+      "thin metal rod"
+    ],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:57:00.972373"
+  },
+  {
+    "step": 8,
+    "start_s": 40,
+    "end_s": 45,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 40s to 45s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"red pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white packet\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white cloth\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"metallic rod\", \"present_at_start\": false, \"present_at_end\": true, \"count_start\": 0, \"count_end\": 1}], \"notes\": \"A hand wearing a red wristband enters from the bottom left, places a metallic rod to the left of the red pencil, and then exits the frame.\"}",
+    "parsed_objects": [
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 2,
+        "count_end": 2
+      },
+      {
+        "name": "metallic needle",
+        "present_at_start": false,
+        "present_at_end": true,
+        "count_start": 0,
+        "count_end": 1
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5430,
+      "total_tokens": 5646,
+      "completion_tokens": 216,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 25.7,
+    "window_state": "CRITICAL",
+    "still_missing": [
+      "thin metal rod"
+    ],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:57:27.086247"
+  },
+  {
+    "step": 9,
+    "start_s": 45,
+    "end_s": 46.866267,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 2-second clip, from a longer surgical tray monitoring video, covering 45s to 47s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"thin dark stick\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"red pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white cloth\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"small white packet\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}], \"notes\": \"No objects are added, removed, or moved during this clip.\"}",
+    "parsed_objects": [
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 2,
+        "count_end": 2
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "thin",
+        "reason": "stoplist"
+      },
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2322,
+      "total_tokens": 2521,
+      "completion_tokens": 199,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 21.4,
+    "window_state": "CRITICAL",
+    "still_missing": [
+      "metallic needle",
+      "thin metal rod"
+    ],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T16:57:48.818027"
+  }
+]

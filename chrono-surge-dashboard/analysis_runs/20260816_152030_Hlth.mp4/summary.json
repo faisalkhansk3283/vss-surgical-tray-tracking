@@ -1,0 +1,98 @@
+{
+  "video": "Hlth.mp4",
+  "duration_s": 46.866267,
+  "n_windows": 10,
+  "baseline": {
+    "green pencil": {
+      "count": 1,
+      "present": true
+    },
+    "orange pencil": {
+      "count": 1,
+      "present": true
+    },
+    "metallic needle": {
+      "count": 1,
+      "present": true
+    },
+    "white gauze pad": {
+      "count": 1,
+      "present": true
+    },
+    "white paper label": {
+      "count": 1,
+      "present": true
+    }
+  },
+  "final_ledger": {
+    "green pencil": {
+      "count": 1,
+      "present": true
+    },
+    "orange pencil": {
+      "count": 1,
+      "present": true
+    },
+    "metallic needle": {
+      "count": 1,
+      "present": true
+    },
+    "white gauze pad": {
+      "count": 1,
+      "present": true
+    },
+    "white paper label": {
+      "count": 1,
+      "present": true
+    },
+    "red pencil": {
+      "count": 1,
+      "present": true
+    },
+    "small white label": {
+      "count": 0,
+      "present": false
+    },
+    "white rectangular packet": {
+      "count": 1,
+      "present": true
+    },
+    "thin metal rod": {
+      "count": 0,
+      "present": false
+    },
+    "white packet with text": {
+      "count": 1,
+      "present": true
+    },
+    "white cloth": {
+      "count": 1,
+      "present": true
+    },
+    "metallic rod": {
+      "count": 1,
+      "present": true
+    },
+    "small white packet": {
+      "count": 1,
+      "present": true
+    },
+    "white packet": {
+      "count": 1,
+      "present": true
+    },
+    "thin dark stick": {
+      "count": 1,
+      "present": true
+    }
+  },
+  "final_mismatches": [],
+  "final_state": "NOMINAL",
+  "cumulative_usage": {
+    "prompt_tokens": 51189,
+    "completion_tokens": 1996,
+    "total_tokens": 53185
+  },
+  "cumulative_latency_s": 236.1,
+  "run_dir": "/home/acer01/chrono-surge-dashboard/analysis_runs/20260816_152030_Hlth.mp4"
+}

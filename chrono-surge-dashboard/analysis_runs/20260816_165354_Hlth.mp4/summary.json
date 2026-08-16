@@ -1,0 +1,54 @@
+{
+  "video": "Hlth.mp4",
+  "duration_s": 46.866267,
+  "n_windows": 10,
+  "baseline": {
+    "pencil": {
+      "count": 2,
+      "present": true
+    },
+    "metallic needle": {
+      "count": 1,
+      "present": true
+    }
+  },
+  "final_ledger": {
+    "pencil": {
+      "count": 2,
+      "present": true,
+      "unseen_streak": 0
+    },
+    "metallic needle": {
+      "count": 0,
+      "present": false,
+      "unseen_streak": 1
+    },
+    "thin metal rod": {
+      "count": 0,
+      "present": false,
+      "unseen_streak": 2
+    }
+  },
+  "final_mismatches": [
+    {
+      "name": "metallic needle",
+      "start": {
+        "count": 1,
+        "present": true
+      },
+      "end": {
+        "count": 0,
+        "present": false,
+        "unseen_streak": 1
+      }
+    }
+  ],
+  "final_state": "CRITICAL",
+  "cumulative_usage": {
+    "prompt_tokens": 51189,
+    "completion_tokens": 1922,
+    "total_tokens": 53111
+  },
+  "cumulative_latency_s": 229.8,
+  "run_dir": "/home/acer01/chrono-surge-dashboard/analysis_runs/20260816_165354_Hlth.mp4"
+}

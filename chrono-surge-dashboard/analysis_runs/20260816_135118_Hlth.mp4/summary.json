@@ -1,0 +1,117 @@
+{
+  "video": "Hlth.mp4",
+  "duration_s": 46.866267,
+  "n_windows": 5,
+  "baseline": {
+    "white paper label": {
+      "count": 1,
+      "present": true
+    },
+    "white gauze pad": {
+      "count": 2,
+      "present": true
+    },
+    "metallic needle": {
+      "count": 1,
+      "present": true
+    },
+    "orange pencil": {
+      "count": 1,
+      "present": true
+    },
+    "green pencil": {
+      "count": 1,
+      "present": true
+    }
+  },
+  "final_ledger": {
+    "white paper label": {
+      "count": 0,
+      "present": false
+    },
+    "white gauze pad": {
+      "count": 2,
+      "present": true
+    },
+    "metallic needle": {
+      "count": 0,
+      "present": false
+    },
+    "orange pencil": {
+      "count": 1,
+      "present": true
+    },
+    "green pencil": {
+      "count": 1,
+      "present": true
+    },
+    "white rectangular packet": {
+      "count": 1,
+      "present": true
+    },
+    "white folded cloth": {
+      "count": 1,
+      "present": true
+    },
+    "thin metal rod": {
+      "count": 1,
+      "present": true
+    },
+    "red pencil": {
+      "count": 1,
+      "present": true
+    },
+    "white cloth": {
+      "count": 1,
+      "present": true
+    },
+    "metal rod": {
+      "count": 1,
+      "present": true
+    },
+    "small white packet": {
+      "count": 1,
+      "present": true
+    },
+    "white packet": {
+      "count": 1,
+      "present": true
+    },
+    "metallic rod": {
+      "count": 1,
+      "present": true
+    }
+  },
+  "final_mismatches": [
+    {
+      "name": "white paper label",
+      "start": {
+        "count": 1,
+        "present": true
+      },
+      "end": {
+        "count": 0,
+        "present": false
+      }
+    },
+    {
+      "name": "metallic needle",
+      "start": {
+        "count": 1,
+        "present": true
+      },
+      "end": {
+        "count": 0,
+        "present": false
+      }
+    }
+  ],
+  "final_state": "CRITICAL",
+  "cumulative_usage": {
+    "prompt_tokens": 49935,
+    "completion_tokens": 1104,
+    "total_tokens": 51039
+  },
+  "cumulative_latency_s": 283.9,
+  "run_dir": "/home/acer01/chrono-surge-dashboard/analysis_runs/20260816_135118_Hlth.mp4"
+}

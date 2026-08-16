@@ -1,0 +1,44 @@
+[
+  {
+    "step": 0,
+    "start_s": 0,
+    "end_s": 5,
+    "system_prompt": "You are monitoring a fixed camera view of a surgical tray area where surgical equipment is placed before a procedure and must be returned after use. Track distinct physical objects placed on or removed from the tray area throughout the video. Ignore shadows, reflections, glare, hand,and lighting changes \u2014 these are not physical objects and must never be reported as objects. Only report solid physical items you can see placed in, held above, or moved into/out of the tray area.",
+    "user_prompt": "This is a short 5-second clip, from a longer surgical tray monitoring video, covering 0s to 5s. List every distinct physical object relevant to the tray area visible in THIS CLIP. For each object report whether it was present at the very start of this clip and whether it is still present at the very end of this clip, plus how many instances were visible at each point. Respond as JSON with EXACTLY this schema and nothing else (no markdown fences, no commentary outside the JSON):\n{\"objects\": [{\"name\": str, \"present_at_start\": bool, \"present_at_end\": bool, \"count_start\": int, \"count_end\": int}], \"notes\": str}",
+    "raw_response": "{\"objects\": [{\"name\": \"green pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"orange pencil\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"metallic needle\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white gauze pad\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}, {\"name\": \"white paper label\", \"present_at_start\": true, \"present_at_end\": true, \"count_start\": 1, \"count_end\": 1}], \"notes\": \"The green pencil is briefly removed and then returned to its original position on the tray area. All other objects remain stationary throughout the clip.\"}",
+    "parsed_objects": [
+      {
+        "name": "pencil",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 2,
+        "count_end": 2
+      },
+      {
+        "name": "metallic needle",
+        "present_at_start": true,
+        "present_at_end": true,
+        "count_start": 1,
+        "count_end": 1
+      }
+    ],
+    "dropped_fragments": [
+      {
+        "name": "white",
+        "reason": "stoplist"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5428,
+      "total_tokens": 5644,
+      "completion_tokens": 216,
+      "prompt_tokens_details": null
+    },
+    "latency_s": 28.9,
+    "window_state": "NOMINAL",
+    "still_missing": [],
+    "decaying": [],
+    "count_anomalies": [],
+    "timestamp": "2026-08-16T17:11:11.761039"
+  }
+]

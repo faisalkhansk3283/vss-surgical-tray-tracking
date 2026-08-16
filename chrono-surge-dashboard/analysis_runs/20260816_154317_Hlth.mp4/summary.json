@@ -1,0 +1,70 @@
+{
+  "video": "Hlth.mp4",
+  "duration_s": 46.866267,
+  "n_windows": 10,
+  "baseline": {
+    "pencil": {
+      "count": 2,
+      "present": true
+    },
+    "metallic needle": {
+      "count": 1,
+      "present": true
+    },
+    "white gauze pad": {
+      "count": 2,
+      "present": true
+    },
+    "white label with text": {
+      "count": 1,
+      "present": true
+    }
+  },
+  "final_ledger": {
+    "pencil": {
+      "count": 2,
+      "present": true
+    },
+    "metallic needle": {
+      "count": 1,
+      "present": true
+    },
+    "white gauze pad": {
+      "count": 2,
+      "present": true
+    },
+    "white label with text": {
+      "count": 1,
+      "present": true
+    },
+    "white": {
+      "count": 2,
+      "present": true
+    },
+    "thin metal rod": {
+      "count": 0,
+      "present": false
+    },
+    "text white with": {
+      "count": 1,
+      "present": true
+    },
+    "metallic": {
+      "count": 1,
+      "present": true
+    },
+    "thin": {
+      "count": 1,
+      "present": true
+    }
+  },
+  "final_mismatches": [],
+  "final_state": "NOMINAL",
+  "cumulative_usage": {
+    "prompt_tokens": 51189,
+    "completion_tokens": 1945,
+    "total_tokens": 53134
+  },
+  "cumulative_latency_s": 230.5,
+  "run_dir": "/home/acer01/chrono-surge-dashboard/analysis_runs/20260816_154317_Hlth.mp4"
+}
